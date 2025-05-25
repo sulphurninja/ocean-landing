@@ -33,6 +33,16 @@ export default function Home() {
     document.body.removeChild(link);
   };
 
+  const handleProxyDownload = () => {
+    // Replace with actual extension download URL
+    const downloadUrl = '/proxy changer.zip';
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = 'proxy-changer.zip';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   // Add these new handler functions alongside handleDownload
 
   const handlePcCoolDownload = () => {
@@ -183,6 +193,10 @@ export default function Home() {
               <Button className="bg-blue-700 hover:bg-blue-800 text-white" onClick={handleDownload}>
                 <Download className="mr-2 h-4 w-4" />
                 Extension Download Karein
+              </Button>
+              <Button className="bg-orange-700 hover:bg-orange-800 text-white" onClick={handleProxyDownload}>
+                <Download className="mr-2 h-4 w-4" />
+                Proxy Changer
               </Button>
               <Button className="bg-green-600 hover:bg-green-700 text-white" onClick={handlePcCoolDownload}>
                 <Download className="mr-2 h-4 w-4" />
